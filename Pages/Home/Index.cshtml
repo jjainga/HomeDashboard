@@ -1,0 +1,60 @@
+@page
+@model HomeDashboard.Pages.Home.IndexModel
+
+<br /> 
+<div class="container  ">
+    <div class="row mx-auto">
+        <h1 id="month"></h1>
+    </div>
+    <div class="row">
+        <div class="col-12 border p-2 m-2">
+            <form method="post">
+                <table class="table table-striped border">
+                    <tr>
+                        <th id="sunday">Sunday</th>
+                        <th id="monday">Monday</th>
+                        <th id="tuesday">Tuesday</th>
+                        <th id="wednesday">Wednesday</th>
+                        <th id="thursday">Thursday</th>
+                        <th id="friday">Friday</th>
+                        <th id="saturday">Saturday</th>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+    <br />
+
+    <div class="row">
+        @* Current date Events and weather *@
+        <div class="col-4">
+            <h5 id="date" ></h1>
+        </div>
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+            <h5>Weather</h2>
+        </div>
+    </div>
+    <br />
+
+@section Scripts{
+    <script src="~/js/todaysDate.js"></script>
+}
