@@ -14,7 +14,6 @@ namespace HomeDashboard.Pages.Home
     public class IndexModel : PageModel
     {
      
-        public string Today = moment().format("MMMM Do YYYY");
         public void Home() {
 
         }
