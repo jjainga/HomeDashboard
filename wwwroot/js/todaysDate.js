@@ -1,15 +1,15 @@
 //setting Today's date and Month
 let today = moment().format('MMMM Do');
-let month = moment().format('MMMM YYYY')
+let month = moment().format('MMMM');
+let year = moment().format('YYYY');
 
 const startOfMonthDay = moment().clone().startOf('month').format('dddd'); //weekday
 const startOfMonth  = moment().clone().startOf('month').format('YYYY-MM'); //current month
 const daysInMonth = moment(startOfMonth, "YYYY-MM").daysInMonth(); //number of days in month
 const startdate = moment().clone().startOf('month').format('D');
 
-const startWeek = moment().startOf('month').week();
-const endWeek = moment().endOf('month').week();
-
+const startWeek = moment(month, 'MMMM').startOf('month').week();
+const endWeek = moment(month, 'MMMM').endOf('month').week();
 
 
 $('document').ready(function() {
@@ -44,7 +44,7 @@ const currentDay = () => {
 const currentMonth = () => {
     $('#month').text(month);
 }
-
+//create calendar
 const calendarFunction = async () => {
     let calendar = []
     for(var week = startWeek; week<=endWeek; week++){
@@ -54,4 +54,13 @@ const calendarFunction = async () => {
         })
     }
     return await calendar;
+}
+// change months
+
+const subtractMonth = () => {
+    month = moment(month, 'MMMM').subtract(1, 'month').format('MMMM');
+}
+
+const addMonth = () => {
+    month = moment(month,'MMMM').add(1, 'month').format('MMMM');
 }
