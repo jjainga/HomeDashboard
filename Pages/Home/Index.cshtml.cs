@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using HomeDashboard.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Moment.js;
 
 
 namespace HomeDashboard.Pages.Home

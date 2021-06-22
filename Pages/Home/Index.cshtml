@@ -1,39 +1,26 @@
 @page
 @model HomeDashboard.Pages.Home.IndexModel
 
-<br /> 
 <div class="container  ">
     <div class="row mx-auto">
-        <h1 id="month"></h1>
+        <h1 id="month" class="text-info"></h1>
     </div>
     <div class="row">
         <div class="col-12 border p-2 m-2">
             <form method="post">
-                <table class="table table-striped border">
+                <table class="table table-striped border center" >
                     <tr>
-                        <th id="sunday">Sunday</th>
-                        <th id="monday">Monday</th>
-                        <th id="tuesday">Tuesday</th>
-                        <th id="wednesday">Wednesday</th>
-                        <th id="thursday">Thursday</th>
-                        <th id="friday">Friday</th>
-                        <th id="saturday">Saturday</th>
+                        <th id="sunday" class="border text-center">Sunday</th>
+                        <th id="monday" class="border text-center">Monday</th>
+                        <th id="tuesday" class="border text-center">Tuesday</th>
+                        <th id="wednesday" class="border text-center">Wednesday</th>
+                        <th id="thursday" class="border text-center">Thursday</th>
+                        <th id="friday" class="border text-center">Friday</th>
+                        <th id="saturday" class="border text-center">Saturday</th>
                     </tr>
-                    <tr>
-                        
-                    </tr>
-                    <tr>
-                        
-                    </tr>
-                    <tr>
-                        
-                    </tr>
-                    <tr>
-                        
-                    </tr>
-                    <tr>
-                        
-                    </tr>
+                    @for(int i = 0; i < 5; i++){
+                        return `<tr name="{i}"></tr>`
+                    }
                 </table>
             </form>
         </div>
