@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12 border p-2 m-2">
             <form method="post">
-                <table class="table table-striped border center">
+                <table id="table" class="table table-striped border center">
                     <tr>
                         <th id="sunday" class="border text-center">Sunday</th>
                         <th id="monday" class="border text-center">Monday</th>
@@ -17,18 +17,7 @@
                         <th id="thursday" class="border text-center">Thursday</th>
                         <th id="friday" class="border text-center">Friday</th>
                         <th id="saturday" class="border text-center">Saturday</th>
-                    </tr>
-                    @for(int i = 0; i < 5; i++) {
-                        <tr id="@i">
-                            <td id="@i" name="sun"></td>
-                            <td id="@i" name="mon"></td>
-                            <td id="@i" name="tue"></td>
-                            <td id="@i" name="wed"></td>
-                            <td id="@i" name="thu"></td>
-                            <td id="@i" name="fri"></td>
-                            <td id="@i" name="sat"></td>
-                        </tr>
-                    }
+                    </tr> 
                  </table>
             </form>
         </div>
@@ -44,7 +33,7 @@
         <div class="col-4">
 
         </div>
-        <div class="col-4">
+        <div class="col-4 text-right">
             <h5>Weather</h2>
         </div>
     </div>
