@@ -32,7 +32,7 @@ namespace HomeDashboard.Controllers
             if(EventFromDb == null) {
                 return Json(new { success = false, message= "Error while Deleting" });
             }
-            _db.Event.Remove(bookFromDb);
+            _db.Event.Remove(EventFromDb);
             await _db.SaveChangesAsync();
             return Json(new { success = true, message = "Delete successful"});
         }

@@ -21,11 +21,11 @@ $('document').ready(function() {
             data.map(obj => {
                 return `
                 <tr id='${obj.week}'> 
-                    ${obj.days.map(day => {
+                    ${obj.days.details.map(day => {
                         return `
                         <td class='border' value='${day}'>
-                            <a href='https://www.google.com'>
-                                ${day}
+                            <a href='/Calendar/AddEvent?date=${moment(day._d, "MMMM Do YYYY").format("MMMM Do YYYY")}'>
+                                ${moment(day._d, "D").format("D")}
                             </a>
                         </td>
                         `
@@ -50,8 +50,11 @@ const calendarFunction = async () => {
     for(var week = startWeek; week<=endWeek; week++){
         calendar.push({
           week:week,
-          days:Array(7).fill(0).map((n, i) => moment().week(week).startOf('week').clone().add(n + i, 'day').format('D'))
-        })
+          days: {
+              details: Array(7).fill(0).map((n, i) => moment().week(week).startOf('week').clone().add(n + i, 'day')),
+              day: Array(7).fill(0).map((n, i) => moment().week(week).startOf('week').clone().add(n + i, 'day').format('D'))
+        }
+    })
     }
     return await calendar;
 }

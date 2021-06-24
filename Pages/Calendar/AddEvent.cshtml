@@ -3,8 +3,37 @@
 
 <br />
 
-<div class="container row">
+<div class="container">
     <form method="post" class="">
-
+        <div class="form-group row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12 m-3 p-3">
+                        <input asp-for="Event.Title" class="form-control" type="text" placeholder="Name of Event">
+                    </div>
+                    <div class="col-12 m-3 p-3">
+                        <input asp-for="Event.Description" class="form-control" placeholder="Description of Event">
+                    </div>
+                </div>
+            </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 m-3 p-3">
+                            <input asp-for="Event.startTime" class="form-control" placeholder="Start Time">
+                        </div>
+                        <div class="col-12 m-3 p-3">
+                            <input asp-for="Event.endTime" class="form-control" placeholder="End Time">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="form-group row">
+                <div class="col-3 offset-3">
+                    <input type="submit" value="AddEvent" class="btn btn-success form-control" /> 
+                </div>
+                <div class="col-3">
+                    <a asp-page="Calendar" class="btn btn-primary form-control">Back to Calendar</a>
+                </div>
+            </div>
     </form>
-</div>
+</div> 
